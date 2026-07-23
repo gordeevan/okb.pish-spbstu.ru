@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Структура ОКБ — ОКБ ПИШ СПбПУ «Цифровой инжиниринг»</title>
+<meta name="description" content="Организационная структура ОКБ ПИШ СПбПУ «Цифровой инжиниринг»: руководство и 8 профильных отделов.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
+<link rel="alternate icon" href="assets/favicon/favicon.ico">
+<link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
+<link rel="manifest" href="assets/favicon/site.webmanifest">
+<link rel="canonical" href="https://okb.pish-spbstu.ru/structure.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ОКБ ПИШ СПбПУ «Цифровой инжиниринг»">
+<meta property="og:title" content="Структура ОКБ — ОКБ ПИШ СПбПУ «Цифровой инжиниринг»">
+<meta property="og:description" content="Организационная структура ОКБ ПИШ СПбПУ «Цифровой инжиниринг»: руководство и 8 профильных отделов.">
+<meta property="og:image" content="https://okb.pish-spbstu.ru/assets/img/og-image.png">
+<meta property="og:url" content="https://okb.pish-spbstu.ru/structure.html">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Структура ОКБ — ОКБ ПИШ СПбПУ «Цифровой инжиниринг»">
+<meta name="twitter:description" content="Организационная структура ОКБ ПИШ СПбПУ «Цифровой инжиниринг»: руководство и 8 профильных отделов.">
+<meta name="twitter:image" content="https://okb.pish-spbstu.ru/assets/img/og-image.png">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <div class="brand-logos">
+      <a href="https://pish.spbstu.ru/" target="_blank" rel="noopener" title="ПИШ СПбПУ"><img src="assets/logos/pish.svg" alt="ПИШ СПбПУ"></a>
+      <a href="https://spbstu.ru/" target="_blank" rel="noopener" title="СПбПУ"><img src="assets/logos/spbstu.svg" alt="СПбПУ"></a>
+      <a href="index.html" class="okb-logo" title="ОКБ «Цифровой инжиниринг»"><img src="assets/logos/okb.svg" alt="ОКБ"></a>
+    </div>
+    <nav class="nav-menu" id="navMenu">
+      <a href="index.html">Главная</a>
+      <div class="nav-item">
+        <a href="projects.html">Проекты</a>
+        <button class="nav-caret-btn" type="button" aria-label="Показать направления"><i class="fa-solid fa-chevron-down"></i></button>
+        <div class="nav-dropdown">
+          <a href="projects.html#uav"><i class="fa-solid fa-plane"></i> Беспилотные летательные аппараты</a>
+          <a href="projects.html#robots"><i class="fa-solid fa-robot"></i> Бои роботов</a>
+          <a href="projects.html#swarm"><i class="fa-solid fa-diagram-project"></i> Роевые БАС</a>
+        </div>
+      </div>
+      <a href="engineering.html">Цифровой инжиниринг</a>
+      <a href="structure.html" class="active">Структура ОКБ</a>
+      <a href="production.html">Производство</a>
+      <a href="education.html">Образование</a>
+      <a href="partnership.html">Сотрудничество</a>
+    </nav>
+    <button class="burger" id="burgerBtn" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Структура ОКБ</h1>
+    <p>Опытно-конструкторское бюро рассчитано на одновременную работу 30 инженеров и студентов. Восемь профильных отделов под руководством ОКБ объединяют расчётчиков, конструкторов, технологов и производственников.</p>
+  </div>
+</section>
+
+<section class="section" id="org">
+  <div class="container">
+    <div class="org-chart reveal" id="orgChart"></div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="copyright">© 2026 ОКБ ПИШ СПбПУ «Цифровой инжиниринг». Все права защищены.</p>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="modalContent" role="dialog" aria-modal="true">
+    <button class="modal-close" id="modalClose" aria-label="Закрыть"><i class="fa-solid fa-xmark"></i></button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+<script>
+/* ========================================================================
+   ОРГСТРУКТУРА ОКБ (по штатному расписанию 2026_0714, без служебных
+   кадровых пометок — только имена, роли и стаж)
+======================================================================== */
+const leadership = [
+  {role:'Руководитель ОКБ', name:'Корчков М.Ю.'}
+];
+
+const departments = [
+  {
+    id:'design', icon:'fa-drafting-compass', name:'Конструкторский отдел',
+    description:'Разработка конструкторской документации на изделия ОКБ — 3D-модели, сборочные чертежи и спецификации в КОМПАС-3D. Ведение изделий от эскизного до рабочего проекта.',
+    staff:[
+      {name:'Кузина А.', role:'Ведущий инженер-конструктор', total:'5,5 лет', okb:'≈1,5 года', focus:'Конструкторская документация «Снегирь-1.5»'},
+      {name:'Софронова Д.', role:'Ведущий инженер-конструктор', total:'9 лет', okb:'в ОКБ', focus:'Конструкторская подготовка изделий'}
+    ]
+  },
+  {
+    id:'aero', icon:'fa-wind', name:'Отдел гидроаэродинамики',
+    description:'Аэродинамические и гидродинамические расчёты БВС и БЭК: виртуальные продувки в CML-Bench.БАС™, подбор профилей крыла, оценка аэродинамического качества.',
+    staff:[
+      {name:'Гареев Р.', role:'Ведущий инженер', total:'8,3 года', okb:'в ОКБ', focus:'Аэродинамические расчёты БВС'},
+      {name:'Лисичко А.', role:'Инженер', total:'1,5 года', okb:'1,5 года', focus:'Аэродинамика семейства «Снегирь»'}
+    ]
+  },
+  {
+    id:'strength', icon:'fa-gears', name:'Отдел прочности',
+    description:'Прочностные расчёты конструкций БВС — статическая и динамическая прочность, конечно-элементный анализ, оценка запасов прочности.',
+    staff:[
+      {name:'Востряков П.', role:'Инженер', total:'2,7 года', okb:'в СПбПУ с 2023', focus:'Прочностные расчёты, FEA'},
+      {name:'Адамович А.', role:'Инженер', total:'1,75 года', okb:'в СПбПУ с 2024', focus:'Прочностные расчёты конструкций'}
+    ]
+  },
+  {
+    id:'aeroelastic', icon:'fa-wave-square', name:'Отдел аэроупругости и нагрузок',
+    description:'Расчёт полётных и наземных нагрузок, аэроупругая устойчивость конструкций — флаттер, дивергенция, определение критических режимов.',
+    staff:[
+      {name:'Чубань А.В.', role:'Начальник отдела (0,5 ст.)', total:'21,7 года', okb:'≈1,7 года', focus:'Нагрузки и аэроупругая устойчивость БВС'}
+    ]
+  },
+  {
+    id:'avionics', icon:'fa-microchip', name:'Отдел бортового оборудования и систем',
+    description:'Разработка бортовых систем управления, авионики и электроники БВС, программирование полётных микроконтроллеров.',
+    staff:[
+      {name:'Большаков В.', role:'Инженер', total:'2,5 года', okb:'2,5 года', focus:'Бортовые системы, программирование микроконтроллеров'},
+      {name:'Заферман М.', role:'Инженер', total:'2,75 года', okb:'≈1,3 года', focus:'Бортовое оборудование БВС'}
+    ]
+  },
+  {
+    id:'tech', icon:'fa-industry', name:'Технологический отдел',
+    description:'Технологическая подготовка производства — разработка технологических карт изготовления изделий, внедрение аддитивных технологий и композитных материалов.',
+    staff:[
+      {name:'Моисейкин А.П.', role:'Ведущий инженер-технолог', total:'36 лет', okb:'в ОКБ', focus:'Технологическая подготовка производства'},
+      {name:'Куатхина Д.', role:'Инженер', total:'2,2 года', okb:'в СПбПУ с 2023', focus:'Технологические процессы изготовления'}
+    ]
+  },
+  {
+    id:'digitaltwin', icon:'fa-cubes', name:'Отдел интеграции цифровых двойников на цифровой платформе',
+    description:'Интеграция расчётных моделей в единый цифровой двойник изделия на платформе CML-Bench.БАС™, системный инжиниринг сквозного процесса разработки.',
+    staff:[
+      {name:'Гордеев А.Н.', role:'Начальник отдела', total:'6,7 года', okb:'≈1,8 года', focus:'Системный инжиниринг, цифровые двойники, CML-Bench.БАС™'}
+    ]
+  },
+  {
+    id:'production', icon:'fa-screwdriver-wrench', name:'Производственный отдел',
+    description:'Изготовление опытных образцов — 3D-печать, работа с композитами, металлообработка, сборка и монтаж на производственной площадке ОКБ.',
+    staff:[
+      {name:'Сухоруков А.', role:'Инженер', total:'8 месяцев', okb:'8 месяцев', focus:'Изготовление опытных образцов, ЧПУ'},
+      {name:'Митин А.', role:'Техник', total:'8 месяцев', okb:'8 месяцев', focus:'Производственные операции'},
+      {name:'Родин А.', role:'Техник', total:'1,5 года', okb:'1,5 года', focus:'Производственные операции'},
+      {name:'Серяков Е.', role:'Техник', total:'8 месяцев', okb:'8 месяцев', focus:'Производственные операции'},
+      {name:'Балашов В.', role:'Техник', total:'1,5 года', okb:'1,5 года', focus:'Производственные операции'}
+    ]
+  }
+];
+
+function renderOrgChart(){
+  const el = document.getElementById('orgChart');
+  el.innerHTML = `
+    <div class="org-tier">
+      ${leadership.map(l => `
+        <div class="org-card org-lead">
+          <div class="org-role">${l.role}</div>
+          <div class="org-name">${l.name}</div>
+        </div>
+      `).join('')}
+    </div>
+    <div class="org-tier">
+      <div class="org-dept-grid">
+        ${departments.map(d => `
+          <div class="org-dept-card">
+            <div class="org-dept-icon"><i class="fa-solid ${d.icon}"></i></div>
+            <h4>${d.name}</h4>
+            <span class="org-dept-count"><i class="fa-solid fa-users"></i> ${d.staff.length} чел.</span>
+            <div class="org-dept-actions">
+              <button data-modal="deptdesc" data-id="${d.id}">Описание</button>
+              <button data-modal="deptstaff" data-id="${d.id}">Сотрудники</button>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `;
+}
+
+function buildDeptDescModal(id){
+  const d = departments.find(x => x.id === id);
+  return `
+    <h3><i class="fa-solid ${d.icon}"></i> ${d.name}</h3>
+    <div class="modal-sub">Основные работы отдела</div>
+    <p style="font-size:.94rem;color:var(--color-text-muted);">${d.description}</p>
+  `;
+}
+
+function buildDeptStaffModal(id){
+  const d = departments.find(x => x.id === id);
+  return `
+    <h3><i class="fa-solid ${d.icon}"></i> ${d.name}</h3>
+    <div class="modal-sub">Сотрудники отдела (${d.staff.length})</div>
+    <div class="staff-ribbon">
+      ${d.staff.map(s => `
+        <div class="staff-card">
+          <div class="staff-avatar"><i class="fa-solid fa-circle-user"></i></div>
+          <h5>${s.name}</h5>
+          <div class="staff-role">${s.role}</div>
+          <div class="staff-tenure">
+            <div><strong>${s.total}</strong><span>общий стаж</span></div>
+            <div><strong>${s.okb}</strong><span>в ОКБ</span></div>
+          </div>
+          <div class="staff-focus">${s.focus}</div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+}
+
+document.addEventListener('click', (e) => {
+  const descTrigger = e.target.closest('[data-modal="deptdesc"]');
+  if(descTrigger){ openModal(buildDeptDescModal(descTrigger.dataset.id)); return; }
+  const staffTrigger = e.target.closest('[data-modal="deptstaff"]');
+  if(staffTrigger){ openModal(buildDeptStaffModal(staffTrigger.dataset.id)); }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  renderOrgChart();
+  document.querySelectorAll('.org-tier').forEach(el => el.classList.add('reveal','visible'));
+  initScrollReveal();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Производство — ОКБ ПИШ СПбПУ «Цифровой инжиниринг»</title>
+<meta name="description" content="Производство ОКБ ПИШ СПбПУ: схема помещения, зоны, станки и технологические процессы изготовления БАС.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
+<link rel="alternate icon" href="assets/favicon/favicon.ico">
+<link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
+<link rel="manifest" href="assets/favicon/site.webmanifest">
+<link rel="canonical" href="https://okb.pish-spbstu.ru/production.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ОКБ ПИШ СПбПУ «Цифровой инжиниринг»">
+<meta property="og:title" content="Производство — ОКБ ПИШ СПбПУ «Цифровой инжиниринг»">
+<meta property="og:description" content="Производство ОКБ ПИШ СПбПУ: схема помещения, зоны, станки и технологические процессы изготовления БАС.">
+<meta property="og:image" content="https://okb.pish-spbstu.ru/assets/img/og-image.png">
+<meta property="og:url" content="https://okb.pish-spbstu.ru/production.html">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Производство — ОКБ ПИШ СПбПУ «Цифровой инжиниринг»">
+<meta name="twitter:description" content="Производство ОКБ ПИШ СПбПУ: схема помещения, зоны, станки и технологические процессы изготовления БАС.">
+<meta name="twitter:image" content="https://okb.pish-spbstu.ru/assets/img/og-image.png">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <div class="brand-logos">
+      <a href="https://pish.spbstu.ru/" target="_blank" rel="noopener" title="ПИШ СПбПУ"><img src="assets/logos/pish.svg" alt="ПИШ СПбПУ"></a>
+      <a href="https://spbstu.ru/" target="_blank" rel="noopener" title="СПбПУ"><img src="assets/logos/spbstu.svg" alt="СПбПУ"></a>
+      <a href="index.html" class="okb-logo" title="ОКБ «Цифровой инжиниринг»"><img src="assets/logos/okb.svg" alt="ОКБ"></a>
+    </div>
+    <nav class="nav-menu" id="navMenu">
+      <a href="index.html">Главная</a>
+      <div class="nav-item">
+        <a href="projects.html">Проекты</a>
+        <button class="nav-caret-btn" type="button" aria-label="Показать направления"><i class="fa-solid fa-chevron-down"></i></button>
+        <div class="nav-dropdown">
+          <a href="projects.html#uav"><i class="fa-solid fa-plane"></i> Беспилотные летательные аппараты</a>
+          <a href="projects.html#robots"><i class="fa-solid fa-robot"></i> Бои роботов</a>
+          <a href="projects.html#swarm"><i class="fa-solid fa-diagram-project"></i> Роевые БАС</a>
+        </div>
+      </div>
+      <a href="engineering.html">Цифровой инжиниринг</a>
+      <a href="structure.html">Структура ОКБ</a>
+      <a href="production.html" class="active">Производство</a>
+      <a href="education.html">Образование</a>
+      <a href="partnership.html">Сотрудничество</a>
+    </nav>
+    <button class="burger" id="burgerBtn" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Производство</h1>
+    <p>Новое подразделение оснащено современным оборудованием для полного цикла изготовления опытных образцов БАС — от 3D-печати до финальной сборки.</p>
+  </div>
+</section>
+
+<section class="section" id="floorplan-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Помещения и станки</span>
+      <h2>Схема производственной площадки</h2>
+      <p>Расположение станков по зонам. Нажмите на зону, чтобы увидеть полный список оборудования и его характеристики.</p>
+    </div>
+    <div class="floorplan reveal" id="floorplan"></div>
+  </div>
+</section>
+
+<section class="section section-alt" id="tech-processes">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Технологические процессы</span>
+      <h2>Технологические карты изготовления</h2>
+    </div>
+    <div class="roadmap-card reveal">
+      <i class="fa-solid fa-diagram-project"></i>
+      <h4>Раздел в разработке</h4>
+      <p style="max-width:560px;margin:0 auto;">Здесь появятся подробные технологические карты изготовления изделий ОКБ — последовательность операций и задействованное оборудование для каждого типа проекта.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="copyright">© 2026 ОКБ ПИШ СПбПУ «Цифровой инжиниринг». Все права защищены.</p>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="modalContent" role="dialog" aria-modal="true">
+    <button class="modal-close" id="modalClose" aria-label="Закрыть"><i class="fa-solid fa-xmark"></i></button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+<script>
+const zones = [
+  {id:'metal', icon:'fa-screwdriver-wrench', name:'Зона металлообработки', stations:['e30hvm','metaltec']},
+  {id:'pcm', icon:'fa-layer-group', name:'Зона изготовления ПКМ', stations:['gray1390','foamcutter']},
+  {id:'assembly', icon:'fa-puzzle-piece', name:'Зона окончательной сборки', stations:['workbench']},
+  {id:'print3d', icon:'fa-cube', name:'Зона 3D-печати', stations:['stratasys']},
+  {id:'solder', icon:'fa-bolt', name:'Слесарно-паяльная зона', stations:['workbench','solderstation']},
+  {id:'office', icon:'fa-building-user', name:'Офисная зона', stations:[]},
+  {id:'storage', icon:'fa-boxes-stacked', name:'Зона хранения', stations:[]},
+  {id:'expo', icon:'fa-chalkboard-user', name:'Образовательное пространство', stations:[]}
+];
+
+const stations = {
+  stratasys:{name:'3D-принтер Stratasys 500', short:'Stratasys 500', zone:'Зона 3D-печати', specs:'FDM, область печати 500×400×400 мм, материалы: AEROTEX, PLA, ABS'},
+  gray1390:{name:'Лазерный станок GRAY 1390H', short:'GRAY 1390H', zone:'Зона изготовления ПКМ', specs:'Мощность 130 Вт, резка фанеры 3–6 мм, акрила, картона'},
+  e30hvm:{name:'Фрезерный станок E30HVM', short:'Фрезерный E30HVM', zone:'Зона металлообработки', specs:'ЧПУ, обработка алюминия, латуни, стали'},
+  metaltec:{name:'Токарный станок METALTEC NEXT', short:'Токарный METALTEC', zone:'Зона металлообработки', specs:'ЧПУ, диаметр обработки до 300 мм'},
+  foamcutter:{name:'Станок для резки пенопласта (струна)', short:'Резка пенопласта', zone:'Зона изготовления ПКМ', specs:'Горячая струна, профили EPP, точность ±0,5 мм'},
+  workbench:{name:'Верстак слесарный', short:'Верстак', zone:'Слесарно-паяльная зона / Зона сборки', specs:'Сборка, пайка, монтаж'},
+  solderstation:{name:'Паяльная станция', short:'Паяльная станция', zone:'Слесарно-паяльная зона', specs:'Пайка проводов, термоусадка, мультиметр'}
+};
+
+function renderFloorplan(){
+  const el = document.getElementById('floorplan');
+  el.innerHTML = zones.map(z => `
+    <div class="zone zone-${z.id}" id="zone-${z.id}" data-zone="${z.id}">
+      <div class="zone-head">
+        <i class="fa-solid ${z.icon}"></i>
+        <span>${z.name}</span>
+      </div>
+      ${z.stations.length ? `<div class="zone-stations">${z.stations.map(sid => `<span class="zone-station-chip">${stations[sid].short}</span>`).join('')}</div>` : ''}
+    </div>
+  `).join('');
+}
+
+function buildZoneModal(id){
+  const zone = zones.find(z => z.id === id);
+  const zoneStations = zone.stations.map(sid => stations[sid]);
+  return `
+    <h3><i class="fa-solid ${zone.icon}"></i> ${zone.name}</h3>
+    <div class="modal-sub">${zoneStations.length ? 'Оборудование зоны' : 'Вспомогательное помещение без производственного оборудования'}</div>
+    ${zoneStations.length ? `<ul class="modal-list">${zoneStations.map(s=>`<li><b>${s.name}</b><br><span style="color:var(--color-text-muted);">${s.specs}</span></li>`).join('')}</ul>` : ''}
+  `;
+}
+
+document.addEventListener('click', (e) => {
+  const zoneEl = e.target.closest('.zone');
+  if(zoneEl) openModal(buildZoneModal(zoneEl.dataset.zone));
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  renderFloorplan();
+  document.querySelectorAll('.zone').forEach(el => el.classList.add('reveal'));
+  initScrollReveal();
+
+  if(location.hash && location.hash.startsWith('#zone-')){
+    const target = document.querySelector(location.hash);
+    if(target){
+      target.classList.add('zone-active');
+      setTimeout(() => target.scrollIntoView({behavior:'smooth', block:'center'}), 300);
+      setTimeout(() => target.classList.remove('zone-active'), 4000);
+    }
+  }
+});
+</script>
+</body>
+</html>

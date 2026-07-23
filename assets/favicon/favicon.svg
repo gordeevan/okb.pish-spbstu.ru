@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" viewBox="0 0 200 166" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="200" height="166" rx="24" fill="#4547BB" />
+  <g fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round">
+    <line x1="100" y1="46" x2="70" y2="24" />
+    <line x1="100" y1="46" x2="130" y2="24" />
+    <line x1="100" y1="46" x2="70" y2="68" />
+    <line x1="100" y1="46" x2="130" y2="68" />
+  </g>
+  <g fill="#FFFFFF">
+    <circle cx="70" cy="24" r="9" />
+    <circle cx="130" cy="24" r="9" />
+    <circle cx="70" cy="68" r="9" />
+    <circle cx="130" cy="68" r="9" />
+    <circle cx="100" cy="46" r="6" />
+  </g>
+  <text x="100" y="128" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-weight="bold" font-size="40" fill="#FFFFFF" letter-spacing="1">ОКБ</text>
+</svg>

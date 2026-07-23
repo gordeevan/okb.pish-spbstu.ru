@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Контакты — ОКБ ПИШ СПбПУ «Цифровой инжиниринг»</title>
+<meta name="description" content="Контакты ОКБ ПИШ СПбПУ «Цифровой инжиниринг»: адрес, телефон, email и форма обратной связи.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
+<link rel="alternate icon" href="assets/favicon/favicon.ico">
+<link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
+<link rel="manifest" href="assets/favicon/site.webmanifest">
+<link rel="canonical" href="https://okb.pish-spbstu.ru/contacts.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ОКБ ПИШ СПбПУ «Цифровой инжиниринг»">
+<meta property="og:title" content="Контакты — ОКБ ПИШ СПбПУ «Цифровой инжиниринг»">
+<meta property="og:description" content="Контакты ОКБ ПИШ СПбПУ «Цифровой инжиниринг»: адрес, телефон, email и форма обратной связи.">
+<meta property="og:image" content="https://okb.pish-spbstu.ru/assets/img/og-image.png">
+<meta property="og:url" content="https://okb.pish-spbstu.ru/contacts.html">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Контакты — ОКБ ПИШ СПбПУ «Цифровой инжиниринг»">
+<meta name="twitter:description" content="Контакты ОКБ ПИШ СПбПУ «Цифровой инжиниринг»: адрес, телефон, email и форма обратной связи.">
+<meta name="twitter:image" content="https://okb.pish-spbstu.ru/assets/img/og-image.png">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <div class="brand-logos">
+      <a href="https://pish.spbstu.ru/" target="_blank" rel="noopener" title="ПИШ СПбПУ"><img src="assets/logos/pish.svg" alt="ПИШ СПбПУ"></a>
+      <a href="https://spbstu.ru/" target="_blank" rel="noopener" title="СПбПУ"><img src="assets/logos/spbstu.svg" alt="СПбПУ"></a>
+      <a href="index.html" class="okb-logo" title="ОКБ «Цифровой инжиниринг»"><img src="assets/logos/okb.svg" alt="ОКБ"></a>
+    </div>
+    <nav class="nav-menu" id="navMenu">
+      <a href="index.html">Главная</a>
+      <div class="nav-item">
+        <a href="projects.html">Проекты</a>
+        <button class="nav-caret-btn" type="button" aria-label="Показать направления"><i class="fa-solid fa-chevron-down"></i></button>
+        <div class="nav-dropdown">
+          <a href="projects.html#uav"><i class="fa-solid fa-plane"></i> Беспилотные летательные аппараты</a>
+          <a href="projects.html#robots"><i class="fa-solid fa-robot"></i> Бои роботов</a>
+          <a href="projects.html#swarm"><i class="fa-solid fa-diagram-project"></i> Роевые БАС</a>
+        </div>
+      </div>
+      <a href="engineering.html">Цифровой инжиниринг</a>
+      <a href="structure.html">Структура ОКБ</a>
+      <a href="production.html">Производство</a>
+      <a href="education.html">Образование</a>
+      <a href="partnership.html">Сотрудничество</a>
+    </nav>
+    <button class="burger" id="burgerBtn" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Контакты и подача заявки</h1>
+    <p>Свяжитесь с нами напрямую или заполните форму — ответим на вопросы об обучении, проектах и сотрудничестве.</p>
+  </div>
+</section>
+
+<section class="section" id="contacts-main">
+  <div class="container">
+    <div class="contact-grid reveal">
+      <div class="contact-info">
+        <ul>
+          <li><i class="fa-solid fa-location-dot"></i> Санкт-Петербург, Политехническая ул., 29, СПбПУ</li>
+          <li><i class="fa-solid fa-phone"></i> +7 (812) 555-01-29</li>
+          <li><i class="fa-solid fa-envelope"></i> okb-uav@spbstu.ru</li>
+          <li><i class="fa-solid fa-clock"></i> Пн–Пт, 10:00–18:00</li>
+        </ul>
+      </div>
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-group">
+          <label for="cf-name">Имя</label>
+          <input type="text" id="cf-name" name="name" required placeholder="Ваше имя">
+        </div>
+        <div class="form-group">
+          <label for="cf-email">Email</label>
+          <input type="email" id="cf-email" name="email" required placeholder="example@mail.ru">
+        </div>
+        <div class="form-group">
+          <label for="cf-msg">Сообщение</label>
+          <textarea id="cf-msg" name="message" rows="4" required placeholder="Ваш вопрос или сообщение"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Отправить</button>
+        <div class="form-msg" id="formMsg"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="copyright">© 2026 ОКБ ПИШ СПбПУ «Цифровой инжиниринг». Все права защищены.</p>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="modalContent" role="dialog" aria-modal="true">
+    <button class="modal-close" id="modalClose" aria-label="Закрыть"><i class="fa-solid fa-xmark"></i></button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
