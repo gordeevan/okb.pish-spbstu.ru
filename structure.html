@@ -88,7 +88,7 @@
    кадровых пометок — только имена, роли и стаж)
 ======================================================================== */
 const leadership = [
-  {role:'Руководитель ОКБ', name:'Корчков М.Ю.'}
+  {role:'Руководитель ОКБ', name:'Корчков М.Ю.', photo:'assets/img/staff/korchkov.jpg'}
 ];
 
 const departments = [
@@ -104,7 +104,7 @@ const departments = [
     id:'aero', icon:'fa-wind', name:'Отдел гидроаэродинамики',
     description:'Аэродинамические и гидродинамические расчёты БВС и БЭК: виртуальные продувки в CML-Bench.БАС™, подбор профилей крыла, оценка аэродинамического качества.',
     staff:[
-      {name:'Гареев Р.', role:'Ведущий инженер', total:'8,3 года', okb:'в ОКБ', focus:'Аэродинамические расчёты БВС'},
+      {name:'Гареев Р.', role:'Ведущий инженер', total:'8,3 года', okb:'в ОКБ', focus:'Аэродинамические расчёты БВС', photo:'assets/img/staff/gareev.jpg'},
       {name:'Лисичко А.', role:'Инженер', total:'1,5 года', okb:'1,5 года', focus:'Аэродинамика семейства «Снегирь»'}
     ]
   },
@@ -127,7 +127,7 @@ const departments = [
     id:'avionics', icon:'fa-microchip', name:'Отдел бортового оборудования и систем',
     description:'Разработка бортовых систем управления, авионики и электроники БВС, программирование полётных микроконтроллеров.',
     staff:[
-      {name:'Большаков В.', role:'Инженер', total:'2,5 года', okb:'2,5 года', focus:'Бортовые системы, программирование микроконтроллеров'},
+      {name:'Большаков В.', role:'Инженер', total:'2,5 года', okb:'2,5 года', focus:'Бортовые системы, программирование микроконтроллеров', photo:'assets/img/staff/bolshakov.jpg'},
       {name:'Заферман М.', role:'Инженер', total:'2,75 года', okb:'≈1,3 года', focus:'Бортовое оборудование БВС'}
     ]
   },
@@ -143,7 +143,7 @@ const departments = [
     id:'digitaltwin', icon:'fa-cubes', name:'Отдел интеграции цифровых двойников на цифровой платформе',
     description:'Интеграция расчётных моделей в единый цифровой двойник изделия на платформе CML-Bench.БАС™, системный инжиниринг сквозного процесса разработки.',
     staff:[
-      {name:'Гордеев А.Н.', role:'Начальник отдела', total:'6,7 года', okb:'≈1,8 года', focus:'Системный инжиниринг, цифровые двойники, CML-Bench.БАС™'}
+      {name:'Гордеев А.Н.', role:'Начальник отдела', total:'6,7 года', okb:'≈1,8 года', focus:'Системный инжиниринг, цифровые двойники, CML-Bench.БАС™', photo:'assets/img/staff/gordeev.jpg'}
     ]
   },
   {
@@ -165,6 +165,7 @@ function renderOrgChart(){
     <div class="org-tier">
       ${leadership.map(l => `
         <div class="org-card org-lead">
+          ${l.photo ? `<img class="org-lead-photo" src="${l.photo}" alt="${l.name}">` : ''}
           <div class="org-role">${l.role}</div>
           <div class="org-name">${l.name}</div>
         </div>
@@ -205,7 +206,7 @@ function buildDeptStaffModal(id){
     <div class="staff-ribbon">
       ${d.staff.map(s => `
         <div class="staff-card">
-          <div class="staff-avatar"><i class="fa-solid fa-circle-user"></i></div>
+          <div class="staff-avatar">${s.photo ? `<img src="${s.photo}" alt="${s.name}">` : '<i class="fa-solid fa-circle-user"></i>'}</div>
           <h5>${s.name}</h5>
           <div class="staff-role">${s.role}</div>
           <div class="staff-tenure">
