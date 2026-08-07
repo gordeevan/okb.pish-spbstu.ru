@@ -115,7 +115,7 @@ nav.nav-menu a.active::after{
 .nav-item .nav-dropdown a:hover{background:rgba(29,78,216,0.1);color:#1D4ED8;}
 .nav-dropdown a i{color:var(--color-accent-dark);width:16px;text-align:center;transition:color .15s;}
 .nav-item .nav-dropdown a:hover i{color:#1D4ED8;}
-@media (max-width:1080px){
+@media (max-width:1580px){
   .nav-item{display:flex;align-items:stretch;flex-wrap:wrap;}
   .nav-item a:first-child{flex:1;}
   .nav-caret-btn{display:flex;align-items:center;}
@@ -756,7 +756,7 @@ footer.site-footer strong{color:#fff;}
 .modal-gallery img{width:100%;height:110px;object-fit:cover;border-radius:8px;}
 
 /* ===================== RESPONSIVE NAV ===================== */
-@media (max-width:1080px){
+@media (max-width:1580px){
   nav.nav-menu{
     position:absolute;top:76px;left:0;right:0;background:var(--color-primary);
     flex-direction:column;align-items:stretch;gap:0;
