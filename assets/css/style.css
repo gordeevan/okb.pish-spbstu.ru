@@ -106,7 +106,7 @@ nav.nav-menu a.active::after{
 /* ---------- Выпадающее меню «Проекты» ---------- */
 .nav-item{position:relative;}
 .nav-item .nav-caret{font-size:.6rem;margin-left:5px;}
-.nav-caret-btn{display:none;background:none;border:none;color:#E3E4F7;padding:8px 10px;}
+.nav-caret-btn{display:none;background:none;border:none;color:#E3E4F7;padding:8px 10px;min-width:44px;min-height:44px;align-items:center;justify-content:center;}
 .nav-dropdown{
   position:absolute;top:calc(100% + 6px);left:0;min-width:260px;
   background:var(--color-white);border-radius:8px;box-shadow:var(--shadow-md);
